@@ -6,6 +6,6 @@ git clone https://github.com/Valerij-Marusyak/laboratory-work.git
 
 cd project_folder
 
-pip install requirements.txt
+pip install -r requirements.txt
 
 """
