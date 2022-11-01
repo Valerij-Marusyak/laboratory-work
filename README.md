@@ -2,10 +2,10 @@ Python 3.10 and higher is required.
 
 """ shell
 
-git clone https://github.com/Valerij-Marusyak/laboratory-work.git
+cd <project_folder>
 
-cd project_folder
+git clone https://github.com/Valerij-Marusyak/laboratory_work.git
 
-pip install requirements.txt
+pip install -r requirements.txt
 
 """
