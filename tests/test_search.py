@@ -12,6 +12,7 @@ class SearchPageTest(unittest.TestCase):
         self.driver = WebDriverFactory.get_driver()
         self.search_page = Search(self.driver)
         self.search_page.open()
+        pass
 
     def tearDown(self) -> None:
         self.driver.save_screenshot("screenshots/" + self.id() + '.png')
