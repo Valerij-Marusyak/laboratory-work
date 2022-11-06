@@ -3,7 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.keys import Keys
 from webdriver_manager.chrome import ChromeDriverManager
-from page_object.search_page import Search
+from laboratory_work.page_object.search_page import Search
 from webdriver_factory import WebDriverFactory
 
 class SearchPageTest(unittest.TestCase):
