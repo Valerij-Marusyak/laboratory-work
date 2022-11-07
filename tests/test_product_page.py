@@ -3,7 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.remote.webdriver import WebDriver
 from webdriver_manager.chrome import ChromeDriverManager
-from laboratory_work.page_object.product_page import ProductPage
+from page_object.product_page import ProductPage
 from webdriver_factory import WebDriverFactory
 
 

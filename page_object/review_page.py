@@ -49,7 +49,7 @@ class Review(BasePage):
         return rating
 
     def set_rating(self, rating: int) -> None:
-        self.get_rating_input(rating).click()   # сделать явное ожидание
+        self.get_rating_input(rating).click()
 
     def field_your_name(self) -> WebElement:
         name = self.driver.find_element(By.ID, "input-name")

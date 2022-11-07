@@ -29,12 +29,11 @@ class ShoppingCart(BasePage):
     def products(self) -> list[str]:
         result: list[str] = []
         products = self.driver.find_element(By.CLASS_NAME, 'table-responsive').find_elements(By.TAG_NAME, 'a')
-        # подобрать более точный локатор, чтобы не приходилось обрезать лишнее
         for product in products:
             if len(product.text) > 0:           #
                 result.append(product.text)
         return result
 
     def get_cart_total(self) -> str:
-        total = self.driver.find_element(By.XPATH, '//*[@id="content"]/div[2]/div/table/tbody/tr[4]/td[2]').text   # подобрать другой локатор
+        total = self.driver.find_element(By.XPATH, '//*[@id="content"]/div[2]/div/table/tbody/tr[4]/td[2]').text
         return total

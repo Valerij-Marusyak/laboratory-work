@@ -24,14 +24,13 @@ class ProductPage(BasePage):
         return brand
 
     def get_product_code(self) -> str:
-        pass
         product_code = self.driver.find_element(By.XPATH,
-                                                '//*[@id="content"]/div[1]/div[2]/ul[1]/li[2]').text  #  подобрать другой локатор
+                                                '//*[@id="content"]/div[1]/div[2]/ul[1]/li[2]').text
         return product_code
 
     def get_price(self) -> str:
-        product_price = self.driver.find_element(By.XPATH,
-                                                 '//*[@id="content"]/div[1]/div[2]/ul[2]/li[2]/h2').text  #  подобрать другой локатор
+        product_price = self.driver.find_element(By.ID, 'content').find_elements(By.TAG_NAME, 'h2')
+        product_price = product_price[1].text
         return product_price
 
     def get_description(self) -> str:
@@ -44,7 +43,7 @@ class ProductPage(BasePage):
         wait.until(EC.presence_of_element_located((By.CLASS_NAME, 'alert-success')))
 
     def compare_button(self) -> WebElement:
-        compare_button = self.driver.find_element(By.XPATH, '//*[@id="content"]/div[1]/div[2]/div[1]/button[2]') #  подобрать другой локатор
+        compare_button = self.driver.find_element(By.CSS_SELECTOR, '[data-original-title="Compare this Product"]')
         return compare_button
 
     def alert_success(self) -> str:
