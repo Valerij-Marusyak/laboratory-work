@@ -1,5 +1,4 @@
 from selenium.webdriver.common.by import By
-from selenium.webdriver.remote.webelement import WebElement
 from typing import List
 from page_object.base_page import BasePage
 from selenium.webdriver.support.wait import WebDriverWait
