@@ -76,12 +76,12 @@ class WebDriverFactory:
         else:
             raise NotImplemented('Getting driver for ' + driver_kind + ' is not implemented yet.')
 
-        resolution = WebDriverFactory.get_window_resolution()
-
-        driver.set_window_size(
-            width=resolution['width'],
-            height=resolution['height']
-        )
+        # resolution = WebDriverFactory.get_window_resolution()
+        #
+        # driver.set_window_size(
+        #     width=resolution['width'],
+        #     height=resolution['height']
+        # )
         return driver
 
     @staticmethod
