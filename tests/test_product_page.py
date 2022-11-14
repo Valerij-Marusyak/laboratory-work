@@ -20,7 +20,7 @@ class ProductPageTest(unittest.TestCase):
         cls.driver.quit()
 
     def tearDown(self) -> None:
-        self.driver.save_screenshot("screenshots/" + self.id() + '.png')
+        self.driver.save_screenshot("test-reports/" + self.id() + '.png')
 
     def test_get_name(self) -> None:
         name = self.product.get_name()
