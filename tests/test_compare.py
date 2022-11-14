@@ -9,7 +9,7 @@ class ComparePageTest(unittest.TestCase):
         self.driver = WebDriverFactory.get_driver()
 
     def tearDown(self) -> None:
-        self.driver.save_screenshot("test-reports/" + self.id() + '.png')
+        self.driver.save_screenshot('test-reports/' + self.id() + '.png')
         self.driver.quit()
 
     def test_compare(self) -> None:

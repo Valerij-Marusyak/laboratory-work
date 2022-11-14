@@ -11,7 +11,7 @@ class AddReviewTest(unittest.TestCase):
         self.review_page.open()
 
     def tearDown(self) -> None:
-        self.driver.save_screenshot("test-reports/" + self.id() + '.png')
+        self.driver.save_screenshot('test-reports/' + self.id() + '.png')
         self.driver.quit()
 
     def test_empty_fields(self) -> None:

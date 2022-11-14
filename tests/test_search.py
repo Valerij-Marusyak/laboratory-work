@@ -12,7 +12,7 @@ class SearchPageTest(unittest.TestCase):
         pass
 
     def tearDown(self) -> None:
-        self.driver.save_screenshot("test-reports/" + self.id() + '.png')
+        self.driver.save_screenshot('test-reports/' + self.id() + '.png')
         self.driver.quit()
 
     def test_apple(self) -> None:
